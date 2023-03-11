@@ -1,0 +1,11 @@
+{
+  "name": "oualidchelghoumum_projet3_122022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "author": "Oualid Chelghoum",
+  "license": "ISC"
+}
