@@ -13,7 +13,7 @@
         padding: 1em 3em;
     }
     &--shadowless{
-        @media screen and(min-width:768px) {
+        @media screen and (min-width:768px) {
             @include box-shadow(0.5em, 0.2em, darken(#FFFFFF,80%));
             &:hover{
                 @include box-shadow(0.5em, 0.2em, darken(#FFFFFF,90%))
