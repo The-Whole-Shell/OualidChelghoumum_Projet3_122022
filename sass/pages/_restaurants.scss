@@ -2,7 +2,7 @@
     background: $darkenbg;
     position: relative;
     z-index: 2;
-    @media screen and(min-width:768px) {
+    @media screen and (min-width:768px) {
         background: white;
     }
     img{
@@ -32,7 +32,7 @@
                 left: 0; 
             }
         }
-        @media screen and(min-width:768px) {
+        @media screen and (min-width:768px) {
             top: -175px;
             width: 70%;
             margin: auto;
@@ -42,19 +42,47 @@
             justify-content: space-between;
             align-items: center;
             margin: 0.5em 1em 1em 0;
-            @media screen and(min-width:768px) {
+            @media screen and (min-width:768px) {
                 margin: 2em;
                 }
             i{
                 margin: 0 0 0 0.5em;
                 font-size: $iconbig;
             }
+
+            .block-heart{
+                position: relative;
+                z-index: 5;
+                &__icon{
+                    cursor: pointer;
+                    position: absolute;
+                    right: 40px;
+                    bottom: -12px;
+                    font-size: $iconbig;
+                    &--hide{
+                        opacity: 0;
+                        background: linear-gradient(170deg, $secondary, $primary);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        color: transparent;
+                    }
+                }
+                &:hover{
+                    &> .block-heart__icon--visible{
+                        opacity: 0;
+                    }
+                    &> .block-heart__icon--hide{
+                        opacity: 1;
+                        animation: 0.3s ease-in-out heartactive;
+                    }
+                }
+            }
         }
         &__button {
             @include flexrow;
         }
         .section-menu{
-            @media screen and(min-width:768px) {
+            @media screen and (min-width:768px) {
                 margin: 0 4em 4em 4em;
             }
             //Block starters/ Main courses/ Desserts
@@ -74,7 +102,7 @@
                     font-weight: $weightlight;
                     text-transform: uppercase;
                     margin: 0 0 1.5em 0;
-                    @media screen and(min-width:768px) {
+                    @media screen and (min-width:768px) {
                         font-size: $fontsmalldesktop;
                     }
                     span {
@@ -91,7 +119,7 @@
                     margin: 0 0 1em 0;
                     @include box-shadow(0.8em, 0.2em);
                     position: relative;
-                    @media screen and(min-width:992px) {
+                    @media screen and (min-width:992px) {
                         margin: 0 0 1em 0;
                     }
                     &:hover{
